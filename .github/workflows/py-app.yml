@@ -37,5 +37,3 @@ jobs:
           aws-region: eu-central-1
 
       - uses: iterative/setup-dvc@v1
-      
-      - run: dvc pull
