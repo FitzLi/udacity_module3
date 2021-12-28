@@ -1,5 +1,5 @@
 [core]
     autostage = true
-    remote = myremote
-['remote "myremote"']
-    url = https://s3.console.aws.amazon.com/s3/buckets/udacity-module3-project?region=eu-north-1
+    remote = aws
+['remote "aws"']
+    url = s3://udacity-module3-project
