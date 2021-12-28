@@ -5,7 +5,7 @@ import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from ml.data import process_data
-from ml.model import train_model
+from ml.model import train_model, compute_model_metrics, inference
 # Add the necessary imports for the starter code.
 
 # Add code to load in the data.
@@ -45,3 +45,12 @@ X_test, y_test, encoder, lb = process_data(
 model = train_model(X_train, y_train)
 with open('../model/model.pkl', 'wb') as file_out:
     pickle.dump(model, file_out)
+
+# Evaluate model on 'education' slice
+with open('../slice_output.txt', 'a') as file_out:
+    for edu in test['education'].unique():
+        condi_slice = test['education'] == edu
+        preds = inference(model, X_test[condi_slice])
+        precision, recall, fbeta = compute_model_metrics(y_test[condi_slice], preds)
+        file_out.write(f"Education: {edu}, Precision: {precision.round(3)}, \
+Recall: {recall.round(3)}, FBeta: {fbeta.round(3)}\n")
