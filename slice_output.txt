@@ -1,0 +1,16 @@
+Education:  Assoc-voc, Precision: 0.583, Recall: 0.479, FBeta: 0.526
+Education:  Some-college, Precision: 0.682, Recall: 0.515, FBeta: 0.587
+Education:  Assoc-acdm, Precision: 0.725, Recall: 0.5, FBeta: 0.592
+Education:  HS-grad, Precision: 0.605, Recall: 0.38, FBeta: 0.467
+Education:  7th-8th, Precision: 1.0, Recall: 0.25, FBeta: 0.4
+Education:  11th, Precision: 1.0, Recall: 0.1, FBeta: 0.182
+Education:  Bachelors, Precision: 0.74, Recall: 0.752, FBeta: 0.746
+Education:  12th, Precision: 1.0, Recall: 0.5, FBeta: 0.667
+Education:  9th, Precision: 1.0, Recall: 0.0, FBeta: 0.0
+Education:  Prof-school, Precision: 0.894, Recall: 0.913, FBeta: 0.903
+Education:  Masters, Precision: 0.843, Recall: 0.81, FBeta: 0.826
+Education:  Doctorate, Precision: 0.867, Recall: 0.935, FBeta: 0.9
+Education:  1st-4th, Precision: 1.0, Recall: 0.0, FBeta: 0.0
+Education:  10th, Precision: 1.0, Recall: 0.267, FBeta: 0.421
+Education:  5th-6th, Precision: 1.0, Recall: 1.0, FBeta: 1.0
+Education:  Preschool, Precision: 0.0, Recall: 1.0, FBeta: 0.0
