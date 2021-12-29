@@ -72,8 +72,8 @@ class Feature(BaseModel):
         }
 
 
-BASE_DIR = pathlib.Path(__file__).resolve()
-MODEL_DIR = BASE_DIR / 'model'
+BASE_DIR = pathlib.Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR
 MODEL_PATH = MODEL_DIR / 'model.pkl' 
 ENCODER_PATH = MODEL_DIR / 'encoder.pkl'
 LB_PATH = MODEL_DIR / 'lb.pkl'
