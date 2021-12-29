@@ -1,1 +1,4 @@
-__pycache__
+/encoder.pkl
+/lb.pkl
+/model.pkl
+*__pycache__/

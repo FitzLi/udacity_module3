@@ -11,7 +11,7 @@ from pydantic import BaseModel
 #    os.system("rm -r .dvc .apt/usr/lib/dvc")
 os.system('pip install "dvc[s3]"')
 os.system('git init')
-os.system('dvc init model')
+os.system('dvc init') 
 os.system('dvc pull')
 
 
