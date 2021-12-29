@@ -33,6 +33,7 @@ def test_low_salary_inference(client):
         "hours_per_week": 40
     }
     r = client.post("/inference/", json=payload)
+    assert r.status_code == 200
     assert r.json()["Predicted salary"] == "<=50k"
 
 def test_high_salary_inference(client):
@@ -53,5 +54,6 @@ def test_high_salary_inference(client):
         "hours_per_week": 60
     }
     r = client.post("/inference/", json=payload)
+    assert r.status_code == 200
     assert r.json()["Predicted salary"] == ">50k"
 
