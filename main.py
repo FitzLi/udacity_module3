@@ -40,6 +40,26 @@ class Feature(BaseModel):
     capital_loss: int
     hours_per_week: int
 
+    class Config:
+        schema_extra = {
+            "example": {
+                "workclass": "state_gov",
+                "education": "bachelors",
+                "marital_status": "never_married",
+                "occupation": "adm_clerical",
+                "relationship": "not_in_family",
+                "race": "white",
+                "sex": "male",
+                "native_country": "united_states", 
+                "age": 39,
+                "fnlgt": 77516, 
+                "education_num": 13, 
+                "capital_gain": 2174, 
+                "capital_loss": 0,
+                "hours_per_week": 40
+            }
+        }
+
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 MODEL_DIR = BASE_DIR / 'model'
@@ -52,7 +72,7 @@ ENCODER = None
 LB = None
 
 @app.on_event("startup")
-def on_startup():
+def models_loading():
     global MODEL
     global ENCODER
     global LB
@@ -68,7 +88,7 @@ def on_startup():
   
 @app.get("/")
 def read_index():
-    return f"What's up, man~~~ {dir(MODEL)}"
+    return "What's up, man~~~!"
 
 @app.post("/inference/")
 async def predict_salary(input_features: Feature):
