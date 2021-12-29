@@ -4,15 +4,14 @@ import pickle
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-#if "DYNO" in os.environ and os.path.isdir(".dvc"):
+if "DYNO" in os.environ and os.path.isdir(".dvc"):
 #    os.system("dvc config core.no_scm true")
 #    if os.system(f"dvc pull") != 0:
 #        exit("dvc pull failed")
 #    os.system("rm -r .dvc .apt/usr/lib/dvc")
-os.system('pip install "dvc[s3]"')
-os.system('git init')
-os.system('dvc init') 
-os.system('dvc pull')
+    os.system('pip install "dvc[s3]"')
+    os.system('git init')
+    os.system('dvc pull')
 
 
 app = FastAPI()
@@ -73,7 +72,7 @@ class Feature(BaseModel):
         }
 
 
-BASE_DIR = pathlib.Path(__file__).resolve().parent
+BASE_DIR = pathlib.Path(__file__).resolve()
 MODEL_DIR = BASE_DIR / 'model'
 MODEL_PATH = MODEL_DIR / 'model.pkl' 
 ENCODER_PATH = MODEL_DIR / 'encoder.pkl'
