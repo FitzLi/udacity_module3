@@ -9,7 +9,7 @@ from pydantic import BaseModel
 #    if os.system(f"dvc pull") != 0:
 #        exit("dvc pull failed")
 #    os.system("rm -r .dvc .apt/usr/lib/dvc")
-os.system('pip install "dvc[s3]"')
+#os.system('pip install "dvc[s3]"')
 os.system('git init')
 os.system('dvc init model')
 os.system('dvc pull')
