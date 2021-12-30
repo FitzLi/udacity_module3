@@ -1,7 +1,5 @@
 # Model Card - Salary Prediction with Census data
 
-For additional information see the Model Card paper: https://arxiv.org/pdf/1810.03993.pdf
-
 ## Model Details
 * Developed by Chao Li for Udacity MLOps Nanodegree
 * RandomForest from sklearn with default parameters
