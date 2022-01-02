@@ -15,8 +15,10 @@
 
 ## Metrics
 _Please include the metrics used and your model's performance on those metrics._
-* Evaluation metrics include Precision, Recall, and F-betar, and are applied across 'education' subgroups
-* Performance:
+* Evaluation metrics include Precision, Recall, and F-betar, and are applied both to the entire test dataset and across 'education' subgroups
+* Performance on entire test dataset
+Precision: 0.72, Recall: 0.619, FBeta: 0.666
+* Performance across subgroups:
 Education   Precision   Recall  F-Beta
 Bachelors   0.693       0.701   0.697
 HS-grad     0.631       0.397   0.488
